@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Create a Survey Form</title>
+</head>
+
+<body>
+  <div class="heading">
+    <h1 id="title">Johan Swan's Web Development Survey</h1>
+    <p id="description">Thank you for taking the time to help me improve my services</p>
+  </div>
+  <div class="container">
+    <form id="survey-form">
+      <div class="gen-info">
+        <label for="fname">Name</label><br><br>
+        <input type="text" id="name" name="name" id="name-label" placeholder="Enter your name" required><br>
+        <label for="Email">Email</label><br>
+        <input type="email" id="email" name="email" id="email-label" placeholder="Enter your Email" required>
+        <label for="Age">Age(Optional)</label><br>
+        <input type="number" id="number" name="age" id="number-label" placeholder="Age" min="10" max="120">
+      </div>
+      <div class="dropdown1">
+        <label for="Website-Needs">Which option best describes your Website
+          needs</label><br>
+        <select name="Website-Needs" id="dropdown">
+          <option value="personal">Personal</option>
+          <option value="resume">Resume</option>
+          <option value="portfolio">Portfolio</option>
+          <option value="resume-portfolio">Resume & Portfolio</option>
+          <option value="business">Business</option>
+          <option value="business">Blogs</option>
+          <option value="budget">Budget Tools</option>
+          <option value="budget">Social Media</option>
+          <option value="budget">E-Commerce</option>
+          <option value="budget">Educational</option>
+          <option value="budget">Entertainment</option>
+          <option value="budget">Forums</option>
+          <option value="budget">Web Portals</option>
+        </select>
+      </div>
+      <div class="radio-buttons">
+        <label>Would you recommend my services to your friends?</label>
+        <div class="radio-align"><br>
+          <input type="radio" id="recm1" name="recommend" value="definitely">
+          <label for="definitely">Definitely</label>
+        </div>
+        <div class="radio-align"><br>
+          <input type="radio" id="recm2" name="recommend" value="maybe">
+          <label for="maybe">Maybe</label>
+        </div>
+        <div class="radio-align"><br>
+          <input type="radio" id="recm3" name="recommend" value="notsure">
+          <label for="notsure">Not Sure</label>
+        </div>
+      </div>
+      <div class="checkboxes">
+        <label>What areas need improvements (check all that apply)</label>
+        <div class="checkbox-align"><br>
+          <input type="checkbox" id="improv1" name="improv1" value="Personal Websites">
+          <label for="improv1">Personal Websites</label>
+        </div>
+        <div class="checkbox-align"><br>
+          <input type="checkbox" id="improv2" name="improv2" value="Resume Websites">
+          <label for="improv2">Resume Websites</label>
+        </div>
+        <div class="checkbox-align"><br>
+          <input type="checkbox" id="improv3" name="improv3" value="Portfolio Websites">
+          <label for="improv3">Portfolio Websites</label>
+        </div>
+        <div class="checkbox-align"><br>
+          <input type="checkbox" id="improv4" name="improv4" value="Business Websites">
+          <label for="improv4">Business Websites</label>
+        </div>
+        <div class="checkbox-align"><br>
+          <input type="checkbox" id="improv5" name="improv5" value="Blog Websites">
+          <label for="improv5">Blog Websites</label>
+        </div>
+        <div class="checkbox-align"><br>
+          <input type="checkbox" id="improv6" name="improv6" value="Game Websites">
+          <label for="improv6">Budget Tools Websites</label>
+        </div>
+        <div class="checkbox-align"><br>
+          <input type="checkbox" id="improv6" name="improv6" value="Game Websites">
+          <label for="improv6">Social Media Websites</label>
+        </div>
+        <div class="checkbox-align"><br>
+          <input type="checkbox" id="improv6" name="improv6" value="Game Websites">
+          <label for="improv6">E-Commerce Websites</label>
+        </div>
+        <div class="checkbox-align"><br>
+          <input type="checkbox" id="improv6" name="improv6" value="Game Websites">
+          <label for="improv6">Educational Websites</label>
+        </div>
+        <div class="checkbox-align"><br>
+          <input type="checkbox" id="improv6" name="improv6" value="Game Websites">
+          <label for="improv6">Entertainment Websites</label>
+        </div>
+        <div class="checkbox-align"><br>
+          <input type="checkbox" id="improv6" name="improv6" value="Game Websites">
+          <label for="improv6">Forum Websites</label>
+        </div>
+        <div class="checkbox-align"><br>
+          <input type="checkbox" id="improv6" name="improv6" value="Game Websites">
+          <label for="improv6">Web Portals</label>
+        </div>
+      </div>
+      <div class="textarea">
+        <label>Any Comments or suggestions?</label>
+        <textarea id="w3review" name="w3review" rows="8" cols="50"></textarea>
+        <button id="submit" type="submit" value="Submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
