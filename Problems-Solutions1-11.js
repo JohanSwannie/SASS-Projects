@@ -190,7 +190,7 @@ function getRating(watchList2) {
 }
 console.log(getRating(watchList2));
 
-// PROBLEM 5 - From an array return only the sqaured value of positive integers(exclude all floats)
+// PROBLEM 5 - From an array return only the squared value of positive integers(exclude all floats)
 
 const squareList = arr => {
   const squaredArr = arr.filter(item1 => (item1 > 0 && item1 % 1 === 0))
