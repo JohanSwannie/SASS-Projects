@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name='viewport' content="width=device-width, initial-scale=1.0">
+  <title>HTML Canvas animation</title>
+  <style>
+    canvas {
+      border: 2px solid red;
+    }
+  </style>
+</head>
+
+<body onload="init();">
+  <canvas id="Stellie" width="1350" height="650">
+  </canvas>
+</body>
+
+  <script>
+    let canvas
+    let ctx
+    let a, c, e, g, i, k, m
+    a=c=e=g=i=k=m=1
+    let b, d, f, h, j, l, n
+    b=d=f=h=j=l=n=0
+    let r
+    const delay = 10
+    const radius = 10
+
+    function init() {
+      canvas = document.getElementById('Stellie')
+      ctx = canvas.getContext('2d')
+      r = canvas.width + radius
+
+      setInterval(move_ball, delay)
+    }
+
+    function draw() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      ctx.beginPath()
+      ctx.fillStyle = "red"
+      ctx.arc(a, b, radius, 0, 2 * Math.PI)
+      ctx.fill()
+      ctx.beginPath()
+      ctx.fillStyle = "navy"
+      ctx.arc(c, d, radius+2, 0, 2 * Math.PI)
+      ctx.fill()
+      ctx.beginPath()
+      ctx.fillStyle = "lightgreen"
+      ctx.arc(e, f, radius+4, 0, 2 * Math.PI)
+      ctx.fill()
+      ctx.beginPath()
+      ctx.fillStyle = "peachpuff"
+      ctx.arc(g, h, radius+6, 0, 2 * Math.PI)
+      ctx.fill()
+      ctx.beginPath()
+      ctx.fillStyle = "olive"
+      ctx.arc(i, j, radius+8, 0, 2 * Math.PI)
+      ctx.fill()
+      ctx.beginPath()
+      ctx.fillStyle = "gray"
+      ctx.arc(k, l, radius+10, 0, 2 * Math.PI)
+      ctx.fill()
+      ctx.beginPath()
+      ctx.fillStyle = "lightseagreen"
+      ctx.arc(m, n, radius+12, 0, 2 * Math.PI)
+      ctx.fill()
+
+    }
+
+    function move_ball() {
+      a += 1
+      c += 1.33
+      e += 1.66
+      g += 2
+      i += 2.33
+      k += 2.66
+      m += 3
+
+
+      if (a > r || c > r || e > r || g > r || i > r || k > r || m > r) {
+        a=c=e=g=i=k=m=0
+      }
+
+      b = Math.sin(a / 4) * 5 + 80
+      d = Math.sin(c / 8) * 10 + 160
+      f = Math.sin(e / 12) * 15 + 240
+      h = Math.sin(g / 16) * 20 + 320
+      j = Math.sin(i / 20) * 25 + 400
+      l = Math.sin(k / 24) * 30 + 480
+      n = Math.sin(m / 28) * 35 + 560
+
+      draw()
+    }
+  </script>
+
+</html>
