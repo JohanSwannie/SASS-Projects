@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Canvas</title>
+</head>
+
+<body>
+  <canvas id="canvas01" width=1450 height=700 style="border:21px solid navy; border-radius: 4%; background: powderblue;">
+    Oopsy your browser is a poopsy
+  </canvas>
+  <script>
+    x = document.getElementById("canvas01")
+    y = x.getContext("2d")
+    y.lineWidth = "12"
+    arr1 = ["red", "peachpuff", "lightseagreen", "khaki", "purple", "lightsalmon", "lightgreen"]
+    arr2 = ["red", "peachpuff", "lightseagreen", "khaki", "purple", "lightsalmon", "lightgreen", "red", "peachpuff", "lightseagreen", "khaki", "purple", "lightsalmon", "lightgreen"]
+    var a = 20
+    var b = 1410
+    var c = 680
+    for (var i = 0; i < arr1.length; i++) {
+      y.strokeStyle = arr1[i]
+      y.beginPath()
+      y.rect(a, a, b, c)
+      y.stroke()
+      a += 10
+      b -= 30
+      c -= 30
+    }
+    i = document.getElementById("canvas01")
+    j = i.getContext("2d")
+    j.lineWidth = "15"
+    j.font ="28px Arial"
+    j.fillStyle = "red"
+    j.fillText("Hello Center", 650, 360)
+    var stellie = 100
+    for (var i = 0; i < (arr2.length * 4); i++) {
+      if (i > 12) {
+        j.lineWidth = "1"
+      }
+      j.strokeStyle = arr2[i]
+      j.beginPath()
+      j.arc(720, 355, stellie, 0, 2 * Math.PI)
+      j.stroke()
+      stellie += 3
+    }
+  </script>
+</body>
+
+</html>
