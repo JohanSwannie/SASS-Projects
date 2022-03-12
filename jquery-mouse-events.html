@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <title>JQuery Exercises 1</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(217deg, peachpuff, orange, lime);
+    }
+
+    .disappearAct {
+      width: 500px;
+      text-align: center;
+      background: lightgreen;
+      border: 4px solid gold;
+    }
+
+    #endMsg {
+      display: none;
+    }
+
+    .dispCont1 {
+      position: absolute;
+      right: 10px;
+      top: 5px;
+    }
+
+    .dispCont2 {
+      position: absolute;
+      right: 10px;
+      top: 100px;
+    }
+
+    .dispCont1,
+    .dispCont2 {
+      width: 500px;
+      padding: 5px;
+      border: 2px solid #000;
+      background: yellow;
+      color: #000;
+      text-align: center;
+    }
+
+    input {
+      width: 113px;
+      padding: 10px;
+      margin-right: 10px;
+      background: lightgreen;
+      border: 2px solid green;
+    }
+
+    #butty {
+      width: 498px;
+      padding: 10px;
+      margin-right: 10px;
+      background: gold;
+      border: 2px solid green;
+    }
+
+    .buttonDisplay {
+      position: absolute;
+      right: 615px;
+      top: 10px;
+      width: 300px;
+      text-align: center;
+      border: 2px solid green;
+      background: peachpuff;
+      display: none;
+    }
+
+    .mouseGround {
+      position: absolute;
+      right: 615px;
+      top: 100px;
+      width: 300px;
+      height: 100px;
+      text-align: center;
+      border: 2px solid green;
+      background: peachpuff;
+    }
+
+    .pTags {
+      position: absolute;
+      right: 615px;
+      top: 220px;
+      width: 300px;
+      height: 135px;
+      text-align: center;
+      border: 2px solid green;
+      color: #FFF;
+      background: navy;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="disappearAct">
+      <h4 id='h41'>Statement Number 1</h4>
+      <h4 id='h42'>Statement Number 2</h4>
+      <h4 id='h43'>Statement Number 3</h4>
+      <h3 id='endMsg'>All Statements Now Deleted</h3>
+    </div>
+    <div class="screenPos">
+      <div class="dispCont1">
+        <h6>X & Y Positions clicked within the Document</h6>
+        <p id='displayPos1'></p>
+      </div>
+      <div class="dispCont2">
+        <h6>X & Y Positions clicked within the Body</h6>
+        <p id='displayPos2'></p>
+      </div>
+    </div>
+    <input id="sve" type="button" value="Save" />
+    <input id="del" type="button" value="Delete" />
+    <input id="clr" type="button" value="Clear" />
+    <input id="rib" type="button" value="Reinstate" /><br>
+    <button id="butty">CLICK ME PLEASE</button>
+    <div class="buttonDisplay">
+      <p id='p1'></p>
+    </div>
+    <div class="mouseGround">
+    </div>
+    <div class="pTags">
+      <p>Volume 1</p>
+      <p>Volume 2</p>
+      <p>Volume 3</p>
+    </div>
+  </div>
+  <script>
+    $(document).on("click", function(e) {
+      if ($(e.target).closest("body").length === 0) {
+        let d1 = 'X = ' + e.pageX + ', Y = ' + e.pageY;
+        $("#displayPos1").html(d1);
+        if (e.pageX > 200 && e.pageY > 550) {
+          $(".pTags").css("background", "navy")
+        }
+      } else {
+        let d2 = 'X = ' + e.pageX + ', Y = ' + e.pageY;
+        $("#displayPos2").html(d2);
+        $("#displayPos1").html(d2);
+      }
+    });
+
+    $("h4").click(function() {
+      $(this).hide()
+      if ($('#h41').is(':hidden') && $('#h42').is(':hidden') && $('#h43').is(':hidden')) {
+        $("#endMsg").css("display", "block")
+      }
+    })
+
+    //  :button indicate any button clicked will be affected
+    $(':button').click(function(e) {
+      let dp1 = this.value + ' ' + this.type + ' clicked';
+      $(".buttonDisplay").fadeIn(4000);
+      $("#p1").html(dp1)
+    });
+
+    $("#del").click(function() {
+      $("h4").hide()
+      if ($('#h41').is(':hidden') && $('#h42').is(':hidden') && $('#h43').is(':hidden')) {
+        $("#endMsg").css("display", "block")
+      }
+    })
+
+    $("#clr").click(function() {
+      $(".mouseGround").html('');
+    })
+
+    $("#rib").click(function() {
+      $("h4").show()
+      $("#endMsg").hide()
+    })
+
+    $('.mouseGround').mouseenter(function(data) {
+      $(this).css('background-color', 'green');
+    });
+
+    $('.mouseGround').mouseleave(function(data) {
+      $(this).css('background-color', 'red');
+    });
+
+    $('.mouseGround').mousedown(function(event) {
+      switch (event.which) {
+        case 1:
+          $(this).css('background-color', 'olive');
+          $(this).html('I HAVE BEEN CLICKED');
+          break;
+        case 2:
+          $(this).css('background-color', 'white');
+          $(this).html('I HAVE BEEN MIDDLE CLICKED');
+          break;
+        case 3:
+          $(this).css('background-color', 'orange');
+          $(this).html('I HAVE BEEN RIGHT CLICKED');
+          break;
+        default:
+          $(this).html('THERE HAS BEEN AN ERROR');
+      }
+    })
+
+    $(".dispCont1").hover(function() {
+      $(this).css("background", "lightseagreen")
+      $(".dispCont2").css("background", "lime")
+    })
+
+    $(".dispCont2").hover(function() {
+      $(this).css("background", "lightseagreen")
+      $(".dispCont1").css("background", "lime")
+    })
+
+    // Only p tags clicked within the .pTags class will be affected
+    $(".pTags").on('click', 'p', function() {
+      $(".pTags").css("width", "320px")
+      $(".pTags").css("height", "150px")
+      $(this).css("font-size", "22px")
+    });
+
+    // Multiple mouse events can be used
+    $(".pTags").on('mouseenter mouseleave', function() {
+      $(this).css("background", "#000")
+    });
+
+    $('#butty').click(function(event) {
+      dp1 = 'The Golden ' + event.target.tagName + ' clicked'
+      $("#p1").html(dp1)
+    });
+  </script>
+</body>
+
+</html>
