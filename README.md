@@ -1,1 +1,1 @@
-# Different HTML CANVAS Projects - including animations
+# Different Projects Regarding JQUERY
