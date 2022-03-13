@@ -1,1 +1,1 @@
-# Different Projects Regarding JQUERY
+# Different Projects Regarding BOOTSTRAP
