@@ -1,0 +1,23 @@
+$list-colors: red, green, navy, purple, peachpuff, lightyellow, crimson, olive, pink
+
+body
+  background: darkgray
+
+@for $i from 1 to 10
+  .text-#{$i}
+    font-size: 10px + ($i * 3)
+
+@for $j from 1 to 10
+  .text-#{$j}
+    color: nth($list-colors, $j)
+
+.last
+  div
+    width: 375px
+    height: 100px
+    color: #FFF
+    text-align: center
+
+@each $bg-color in purple, red, darkgreen
+  .#{$bg-color}-bg
+    background-color: $bg-color
