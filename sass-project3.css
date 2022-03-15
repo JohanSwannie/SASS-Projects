@@ -1,0 +1,94 @@
+body {
+  background: darkgray
+}
+
+.text-1 {
+  font-size: 13px
+}
+
+.text-2 {
+  font-size: 16px
+}
+
+.text-3 {
+  font-size: 19px
+}
+
+.text-4 {
+  font-size: 22px
+}
+
+.text-5 {
+  font-size: 25px
+}
+
+.text-6 {
+  font-size: 28px
+}
+
+.text-7 {
+  font-size: 31px
+}
+
+.text-8 {
+  font-size: 34px
+}
+
+.text-9 {
+  font-size: 37px
+}
+
+.text-1 {
+  color: red
+}
+
+.text-2 {
+  color: green
+}
+
+.text-3 {
+  color: navy
+}
+
+.text-4 {
+  color: purple
+}
+
+.text-5 {
+  color: #ffdab9
+}
+
+.text-6 {
+  color: #ffffe0
+}
+
+.text-7 {
+  color: crimson
+}
+
+.text-8 {
+  color: olive
+}
+
+.text-9 {
+  color: pink
+}
+
+.last div {
+  width: 375px;
+  height: 100px;
+  color: #FFF;
+  text-align: center
+}
+
+.purple-bg {
+  background-color: purple
+}
+
+.red-bg {
+  background-color: red
+}
+
+.darkgreen-bg {
+  background-color: #006400
+}
