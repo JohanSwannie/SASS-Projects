@@ -1,0 +1,36 @@
+@mixin bgc($val)
+  @if $val == 1
+    background-color: lime
+    mix-blend-mode: multiply
+  @else if $val == 2
+    background-color: peachpuff
+    mix-blend-mode: saturation
+  @else if $val == 3
+    background-color: lightgray
+    mix-blend-mode: overlay
+  @else if $val == 4
+    background-color: lightyellow
+    mix-blend-mode: hue
+  @else if $val == 5
+    background-color: darkgray
+    mix-blend-mode: difference
+  @else if $val == 6
+    background-color: lightblue
+    mix-blend-mode: luminosity
+  @else
+    background-color: red
+    mix-blend-mode: normal
+
+body
+  background: linear-gradient(217deg, skyblue, peachpuff, lime)
+
+.container-fluid
+  .row
+    .col-sm-2:nth-child(even)
+      @include bgc(1)
+      img
+        width: 350px
+    .col-sm-2:nth-child(odd)
+      @include bgc(2)
+      img
+        width: 350px
