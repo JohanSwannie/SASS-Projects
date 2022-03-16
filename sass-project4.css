@@ -1,0 +1,42 @@
+body {
+  background: linear-gradient(109deg, lime, peachpuff, lightyellow, peachpuff, lime)
+}
+
+p, .h2c {
+  width: 200px;
+  height: 200px;
+  background-color: crimson;
+  color: #FFF;
+  padding: 20px;
+  border: 5px solid #000
+}
+
+.text-1 {
+  font-size: 16.5px
+}
+
+.text-2 {
+  font-size: 18px
+}
+
+.text-3 {
+  font-size: 19.5px
+}
+
+.text-4 {
+  font-size: 21px
+}
+
+.text-5 {
+  font-size: 22.5px
+}
+
+.text-6 {
+  font-size: 24px
+}
+
+.h2c {
+  width: 300px;
+  color: #000;
+  background-color: yellow
+}
