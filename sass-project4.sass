@@ -1,0 +1,23 @@
+body
+  background: linear-gradient(109deg, lime, peachpuff, lightyellow, peachpuff, lime)
+
+p
+  width: 200px
+  height: 200px
+  background-color: crimson
+  color: #FFF
+  padding: 20px
+  border: 5px solid #000
+
+$cntr: 1
+
+@while $cntr < 7
+  .text-#{$cntr}
+    font-size: 15px + ($cntr * 1.5)
+  $cntr: $cntr + 1
+
+.h2c
+  @extend p
+  width: 300px
+  color: #000
+  background-color: yellow
