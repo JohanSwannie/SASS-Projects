@@ -1,45 +1,3 @@
-.parent1 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: crimson;
-  width: 750px;
-  height: 500px
-}
-
-.child1 {
-  background: deepskyblue;
-  width: 50%;
-  height: 50%;
-  transition: transform 3s linear 1s
-}
-
-.parent1:hover .child1 {
-  background: rgba(100, 200, 255, 0.6);
-  transform: translateX(100%)
-}
-
-.parent2 {
-  position: absolute;
-  top: 0;
-  left: 751px;
-  background: lime;
-  width: 750px;
-  height: 500px
-}
-
-.child2 {
-  background: orange;
-  width: 50%;
-  height: 50%;
-  border-radius: 58%;
-  animation: do-it-man 8s ease-in forwards infinite
-}
-
-.parent2:hover .child2 {
-  animation-play-state: paused
-}
-
 @keyframes do-it-man {
   25% {
     background: #ff8c00;
@@ -68,29 +26,6 @@
     width: 10%;
     height: 10%
   }
-}
-
-.parent3 {
-  position: absolute;
-  top: 501px;
-  left: 0;
-  background: lightsalmon;
-  width: 1500px;
-  height: 220px
-}
-
-.relly {
-  position: relative
-}
-
-.child3 {
-  position: absolute;
-  top: 20px;
-  background: darkred;
-  width: 100px;
-  height: 100px;
-  border-radius: 58%;
-  animation: do-it-again-man 8s ease-in forwards infinite alternate
 }
 
 @keyframes do-it-again-man {
@@ -693,4 +628,69 @@
     height: 199px;
     transform: translateX(1300px);
   }
+}
+
+.parent1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: crimson;
+  width: 750px;
+  height: 500px
+}
+
+.child1 {
+  background: deepskyblue;
+  width: 50%;
+  height: 50%;
+  transition: transform 3s linear 1s
+}
+
+.parent1:hover .child1 {
+  background: rgba(100, 200, 255, 0.6);
+  transform: translateX(100%)
+}
+
+.parent2 {
+  position: absolute;
+  top: 0;
+  left: 751px;
+  background: lime;
+  width: 750px;
+  height: 500px
+}
+
+.child2 {
+  background: orange;
+  width: 50%;
+  height: 50%;
+  border-radius: 58%;
+  animation: do-it-man 8s ease-in forwards infinite
+}
+
+.parent2:hover .child2 {
+  animation-play-state: paused
+}
+
+.parent3 {
+  position: absolute;
+  top: 501px;
+  left: 0;
+  background: lightsalmon;
+  width: 1500px;
+  height: 220px
+}
+
+.relly {
+  position: relative
+}
+
+.child3 {
+  position: absolute;
+  top: 20px;
+  background: darkred;
+  width: 100px;
+  height: 100px;
+  border-radius: 58%;
+  animation: do-it-again-man 8s ease-in forwards infinite alternate
 }
