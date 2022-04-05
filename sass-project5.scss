@@ -1,0 +1,116 @@
+@keyframes do-it-man {
+  $color: pink;
+  $transformation: translateY(100%);
+  $size: 0;
+  @for $i from 1 to 5 {
+    $number: $i * 25;
+    $percent: $number + "%";
+    @if $number == 25 {
+      $color: darkorange;
+      $transformation: translateY(100%);
+      $size: 40%;
+    } @else if $number == 50 {
+      $color: blueviolet;
+      $transformation: translate(100%, 100%);
+      $size: 30%;
+    } @else if $number == 75 {
+      $color: firebrick;
+      $transformation: translateX(100%);
+      $size: 20%;
+    } @else {
+      $color: darkgoldenrod;
+      $transformation: translate(0, 0);
+      $size: 10%;
+    }
+    #{$percent} {
+      background: $color;
+      transform: $transformation;
+      width: $size;
+      height: $size;
+    }
+  }
+
+}
+
+@keyframes do-it-again-man {
+  $totaltransformation: transformX(0);
+  $descr: translateX;
+  $siza: 100;
+  $endtag1: ");";
+  @for $j from 1 to 101 {
+    $numbers: $j;
+    $percentage: $numbers + "%";
+    $totaltransformation: $descr + "(" + ($j * 13) + "px" + $endtag1;
+    #{$percentage} {
+      width: $siza + px;
+      height: $siza + px;
+      transform: $totaltransformation;
+    }
+    $siza: $siza + 1;
+  }
+}
+
+.parent1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: crimson;
+  width: 750px;
+  height: 500px;
+}
+
+.child1 {
+  background: deepskyblue;
+  width: 50%;
+  height: 50%;
+  transition: transform 3s linear 1s;
+}
+
+.parent1:hover .child1 {
+  background: rgba(100, 200, 255, 0.6);
+  transform: translateX(100%);
+}
+
+.parent2 {
+  position: absolute;
+  top: 0;
+  left: 751px;
+  background: lime;
+  width: 750px;
+  height: 500px;
+}
+
+.child2 {
+  background: orange;
+  width: 50%;
+  height: 50%;
+  border-radius: 58%;
+  animation: do-it-man 8s ease-in forwards infinite;
+}
+
+.parent2:hover .child2 {
+  animation-play-state: paused;
+}
+
+.parent3 {
+  position: absolute;
+  top: 501px;
+  left: 0;
+  background: lightsalmon;
+  width: 1500px;
+  height: 220px;
+}
+
+.relly {
+  position: relative;
+}
+
+.child3 {
+  position: absolute;
+  top: 20px;
+  background: darkred;
+  width: 100px;
+  height: 100px;
+  border-radius: 58%;
+  animation: do-it-again-man 8s ease-in forwards infinite alternate;
+}
