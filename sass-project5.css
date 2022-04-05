@@ -1,0 +1,696 @@
+.parent1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: crimson;
+  width: 750px;
+  height: 500px
+}
+
+.child1 {
+  background: deepskyblue;
+  width: 50%;
+  height: 50%;
+  transition: transform 3s linear 1s
+}
+
+.parent1:hover .child1 {
+  background: rgba(100, 200, 255, 0.6);
+  transform: translateX(100%)
+}
+
+.parent2 {
+  position: absolute;
+  top: 0;
+  left: 751px;
+  background: lime;
+  width: 750px;
+  height: 500px
+}
+
+.child2 {
+  background: orange;
+  width: 50%;
+  height: 50%;
+  border-radius: 58%;
+  animation: do-it-man 8s ease-in forwards infinite
+}
+
+.parent2:hover .child2 {
+  animation-play-state: paused
+}
+
+@keyframes do-it-man {
+  25% {
+    background: #ff8c00;
+    transform: translateY(100%);
+    width: 40%;
+    height: 40%
+  }
+
+  50% {
+    background: #8a2be2;
+    transform: translate(100%, 100%);
+    width: 30%;
+    height: 30%
+  }
+
+  75% {
+    background: #b22222;
+    transform: translateX(100%);
+    width: 20%;
+    height: 20%
+  }
+
+  100% {
+    background: #b8860b;
+    transform: translate(0, 0);
+    width: 10%;
+    height: 10%
+  }
+}
+
+.parent3 {
+  position: absolute;
+  top: 501px;
+  left: 0;
+  background: lightsalmon;
+  width: 1500px;
+  height: 220px
+}
+
+.relly {
+  position: relative
+}
+
+.child3 {
+  position: absolute;
+  top: 20px;
+  background: darkred;
+  width: 100px;
+  height: 100px;
+  border-radius: 58%;
+  animation: do-it-again-man 8s ease-in forwards infinite alternate
+}
+
+@keyframes do-it-again-man {
+  1% {
+    width: 100px;
+    height: 100px;
+    transform: translateX(13px);
+  }
+
+  2% {
+    width: 101px;
+    height: 101px;
+    transform: translateX(26px);
+  }
+
+  3% {
+    width: 102px;
+    height: 102px;
+    transform: translateX(39px);
+  }
+
+  4% {
+    width: 103px;
+    height: 103px;
+    transform: translateX(52px);
+  }
+
+  5% {
+    width: 104px;
+    height: 104px;
+    transform: translateX(65px);
+  }
+
+  6% {
+    width: 105px;
+    height: 105px;
+    transform: translateX(78px);
+  }
+
+  7% {
+    width: 106px;
+    height: 106px;
+    transform: translateX(91px);
+  }
+
+  8% {
+    width: 107px;
+    height: 107px;
+    transform: translateX(104px);
+  }
+
+  9% {
+    width: 108px;
+    height: 108px;
+    transform: translateX(117px);
+  }
+
+  10% {
+    width: 109px;
+    height: 109px;
+    transform: translateX(130px);
+  }
+
+  11% {
+    width: 110px;
+    height: 110px;
+    transform: translateX(143px);
+  }
+
+  12% {
+    width: 111px;
+    height: 111px;
+    transform: translateX(156px);
+  }
+
+  13% {
+    width: 112px;
+    height: 112px;
+    transform: translateX(169px);
+  }
+
+  14% {
+    width: 113px;
+    height: 113px;
+    transform: translateX(182px);
+  }
+
+  15% {
+    width: 114px;
+    height: 114px;
+    transform: translateX(195px);
+  }
+
+  16% {
+    width: 115px;
+    height: 115px;
+    transform: translateX(208px);
+  }
+
+  17% {
+    width: 116px;
+    height: 116px;
+    transform: translateX(221px);
+  }
+
+  18% {
+    width: 117px;
+    height: 117px;
+    transform: translateX(234px);
+  }
+
+  19% {
+    width: 118px;
+    height: 118px;
+    transform: translateX(247px);
+  }
+
+  20% {
+    width: 119px;
+    height: 119px;
+    transform: translateX(260px);
+  }
+
+  21% {
+    width: 120px;
+    height: 120px;
+    transform: translateX(273px);
+  }
+
+  22% {
+    width: 121px;
+    height: 121px;
+    transform: translateX(286px);
+  }
+
+  23% {
+    width: 122px;
+    height: 122px;
+    transform: translateX(299px);
+  }
+
+  24% {
+    width: 123px;
+    height: 123px;
+    transform: translateX(312px);
+  }
+
+  25% {
+    width: 124px;
+    height: 124px;
+    transform: translateX(325px);
+  }
+
+  26% {
+    width: 125px;
+    height: 125px;
+    transform: translateX(338px);
+  }
+
+  27% {
+    width: 126px;
+    height: 126px;
+    transform: translateX(351px);
+  }
+
+  28% {
+    width: 127px;
+    height: 127px;
+    transform: translateX(364px);
+  }
+
+  29% {
+    width: 128px;
+    height: 128px;
+    transform: translateX(377px);
+  }
+
+  30% {
+    width: 129px;
+    height: 129px;
+    transform: translateX(390px);
+  }
+
+  31% {
+    width: 130px;
+    height: 130px;
+    transform: translateX(403px);
+  }
+
+  32% {
+    width: 131px;
+    height: 131px;
+    transform: translateX(416px);
+  }
+
+  33% {
+    width: 132px;
+    height: 132px;
+    transform: translateX(429px);
+  }
+
+  34% {
+    width: 133px;
+    height: 133px;
+    transform: translateX(442px);
+  }
+
+  35% {
+    width: 134px;
+    height: 134px;
+    transform: translateX(455px);
+  }
+
+  36% {
+    width: 135px;
+    height: 135px;
+    transform: translateX(468px);
+  }
+
+  37% {
+    width: 136px;
+    height: 136px;
+    transform: translateX(481px);
+  }
+
+  38% {
+    width: 137px;
+    height: 137px;
+    transform: translateX(494px);
+  }
+
+  39% {
+    width: 138px;
+    height: 138px;
+    transform: translateX(507px);
+  }
+
+  40% {
+    width: 139px;
+    height: 139px;
+    transform: translateX(520px);
+  }
+
+  41% {
+    width: 140px;
+    height: 140px;
+    transform: translateX(533px);
+  }
+
+  42% {
+    width: 141px;
+    height: 141px;
+    transform: translateX(546px);
+  }
+
+  43% {
+    width: 142px;
+    height: 142px;
+    transform: translateX(559px);
+  }
+
+  44% {
+    width: 143px;
+    height: 143px;
+    transform: translateX(572px);
+  }
+
+  45% {
+    width: 144px;
+    height: 144px;
+    transform: translateX(585px);
+  }
+
+  46% {
+    width: 145px;
+    height: 145px;
+    transform: translateX(598px);
+  }
+
+  47% {
+    width: 146px;
+    height: 146px;
+    transform: translateX(611px);
+  }
+
+  48% {
+    width: 147px;
+    height: 147px;
+    transform: translateX(624px);
+  }
+
+  49% {
+    width: 148px;
+    height: 148px;
+    transform: translateX(637px);
+  }
+
+  50% {
+    width: 149px;
+    height: 149px;
+    transform: translateX(650px);
+  }
+
+  51% {
+    width: 150px;
+    height: 150px;
+    transform: translateX(663px);
+  }
+
+  52% {
+    width: 151px;
+    height: 151px;
+    transform: translateX(676px);
+  }
+
+  53% {
+    width: 152px;
+    height: 152px;
+    transform: translateX(689px);
+  }
+
+  54% {
+    width: 153px;
+    height: 153px;
+    transform: translateX(702px);
+  }
+
+  55% {
+    width: 154px;
+    height: 154px;
+    transform: translateX(715px);
+  }
+
+  56% {
+    width: 155px;
+    height: 155px;
+    transform: translateX(728px);
+  }
+
+  57% {
+    width: 156px;
+    height: 156px;
+    transform: translateX(741px);
+  }
+
+  58% {
+    width: 157px;
+    height: 157px;
+    transform: translateX(754px);
+  }
+
+  59% {
+    width: 158px;
+    height: 158px;
+    transform: translateX(767px);
+  }
+
+  60% {
+    width: 159px;
+    height: 159px;
+    transform: translateX(780px);
+  }
+
+  61% {
+    width: 160px;
+    height: 160px;
+    transform: translateX(793px);
+  }
+
+  62% {
+    width: 161px;
+    height: 161px;
+    transform: translateX(806px);
+  }
+
+  63% {
+    width: 162px;
+    height: 162px;
+    transform: translateX(819px);
+  }
+
+  64% {
+    width: 163px;
+    height: 163px;
+    transform: translateX(832px);
+  }
+
+  65% {
+    width: 164px;
+    height: 164px;
+    transform: translateX(845px);
+  }
+
+  66% {
+    width: 165px;
+    height: 165px;
+    transform: translateX(858px);
+  }
+
+  67% {
+    width: 166px;
+    height: 166px;
+    transform: translateX(871px);
+  }
+
+  68% {
+    width: 167px;
+    height: 167px;
+    transform: translateX(884px);
+  }
+
+  69% {
+    width: 168px;
+    height: 168px;
+    transform: translateX(897px);
+  }
+
+  70% {
+    width: 169px;
+    height: 169px;
+    transform: translateX(910px);
+  }
+
+  71% {
+    width: 170px;
+    height: 170px;
+    transform: translateX(923px);
+  }
+
+  72% {
+    width: 171px;
+    height: 171px;
+    transform: translateX(936px);
+  }
+
+  73% {
+    width: 172px;
+    height: 172px;
+    transform: translateX(949px);
+  }
+
+  74% {
+    width: 173px;
+    height: 173px;
+    transform: translateX(962px);
+  }
+
+  75% {
+    width: 174px;
+    height: 174px;
+    transform: translateX(975px);
+  }
+
+  76% {
+    width: 175px;
+    height: 175px;
+    transform: translateX(988px);
+  }
+
+  77% {
+    width: 176px;
+    height: 176px;
+    transform: translateX(1001px);
+  }
+
+  78% {
+    width: 177px;
+    height: 177px;
+    transform: translateX(1014px);
+  }
+
+  79% {
+    width: 178px;
+    height: 178px;
+    transform: translateX(1027px);
+  }
+
+  80% {
+    width: 179px;
+    height: 179px;
+    transform: translateX(1040px);
+  }
+
+  81% {
+    width: 180px;
+    height: 180px;
+    transform: translateX(1053px);
+  }
+
+  82% {
+    width: 181px;
+    height: 181px;
+    transform: translateX(1066px);
+  }
+
+  83% {
+    width: 182px;
+    height: 182px;
+    transform: translateX(1079px);
+  }
+
+  84% {
+    width: 183px;
+    height: 183px;
+    transform: translateX(1092px);
+  }
+
+  85% {
+    width: 184px;
+    height: 184px;
+    transform: translateX(1105px);
+  }
+
+  86% {
+    width: 185px;
+    height: 185px;
+    transform: translateX(1118px);
+  }
+
+  87% {
+    width: 186px;
+    height: 186px;
+    transform: translateX(1131px);
+  }
+
+  88% {
+    width: 187px;
+    height: 187px;
+    transform: translateX(1144px);
+  }
+
+  89% {
+    width: 188px;
+    height: 188px;
+    transform: translateX(1157px);
+  }
+
+  90% {
+    width: 189px;
+    height: 189px;
+    transform: translateX(1170px);
+  }
+
+  91% {
+    width: 190px;
+    height: 190px;
+    transform: translateX(1183px);
+  }
+
+  92% {
+    width: 191px;
+    height: 191px;
+    transform: translateX(1196px);
+  }
+
+  93% {
+    width: 192px;
+    height: 192px;
+    transform: translateX(1209px);
+  }
+
+  94% {
+    width: 193px;
+    height: 193px;
+    transform: translateX(1222px);
+  }
+
+  95% {
+    width: 194px;
+    height: 194px;
+    transform: translateX(1235px);
+  }
+
+  96% {
+    width: 195px;
+    height: 195px;
+    transform: translateX(1248px);
+  }
+
+  97% {
+    width: 196px;
+    height: 196px;
+    transform: translateX(1261px);
+  }
+
+  98% {
+    width: 197px;
+    height: 197px;
+    transform: translateX(1274px);
+  }
+
+  99% {
+    width: 198px;
+    height: 198px;
+    transform: translateX(1287px);
+  }
+
+  100% {
+    width: 199px;
+    height: 199px;
+    transform: translateX(1300px);
+  }
+}
